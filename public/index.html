@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inscrição Eleitoral | Exército Brasileiro LN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="camo-bg"></div>
+  <div class="blue-glow one"></div>
+  <div class="blue-glow two"></div>
+
+  <header class="hero">
+    <nav class="navbar">
+      <div class="brand">
+        <img src="https://media.discordapp.net/attachments/1512882801236644041/1514290135834038445/file_00000000c99c71f59606cc280a206a29.png?ex=6a3b4ed6&is=6a39fd56&hm=e9ecdf6971f4908b398caf327cd92a4f7df6bf2e14da5dac6035930d0c2570b1&=&format=webp&quality=lossless&width=542&height=542" alt="Logo EB LN">
+        <div>
+          <strong>Exército Brasileiro LN</strong>
+          <span>Central de Inscrições Eleitorais</span>
+        </div>
+      </div>
+
+      <a href="#inscricao" class="nav-btn">Inscrever-se</a>
+    </nav>
+
+    <section class="hero-grid">
+      <div class="hero-text">
+        <span class="badge">Fase 1 • Inscrições abertas</span>
+        <h1>Eleição Oficial</h1>
+        <h2>Inscrição de Candidatos</h2>
+        <p>
+          Registre sua candidatura e receba automaticamente seu número oficial de identificação.
+          As vagas são limitadas de <strong>1 a 15</strong>.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#inscricao" class="primary-btn">Fazer inscrição</a>
+          <a href="#vagas" class="ghost-btn">Ver vagas</a>
+        </div>
+      </div>
+
+      <aside class="command-card">
+        <div class="command-top">
+          <span>Status do processo</span>
+          <strong>ONLINE</strong>
+        </div>
+
+        <div class="radar">
+          <div class="radar-line"></div>
+          <div class="radar-center">EB</div>
+        </div>
+
+        <div class="stats">
+          <div>
+            <strong id="ocupadasTopo">0</strong>
+            <span>Ocupadas</span>
+          </div>
+          <div>
+            <strong id="livresTopo">15</strong>
+            <span>Livres</span>
+          </div>
+          <div>
+            <strong>15</strong>
+            <span>Total</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </header>
+
+  <main>
+    <section class="showcase">
+      <div class="showcase-image">
+        <img src="https://media.discordapp.net/attachments/1512882801236644041/1514290136404328568/file_00000000e97c720e90499a115dfb5390.png?ex=6a3b4ed6&is=6a39fd56&hm=b144916e00aac62949579fdbb1e7ee6062aa01ba23b172e4744eb1e3eec78598&=&format=webp&quality=lossless&width=813&height=542" alt="Base eleitoral EB">
+      </div>
+
+      <div class="showcase-text">
+        <span class="section-tag">Sistema oficial</span>
+        <h2>Inscrição rápida, limpa e com controle de vagas.</h2>
+        <p>
+          O candidato informa o nick do Roblox e o Discord. O sistema registra a inscrição,
+          entrega um número oficial e envia o log para o servidor do Discord.
+        </p>
+
+        <div class="mini-list">
+          <span>✓ Numeração automática</span>
+          <span>✓ Limite de 15 candidatos</span>
+          <span>✓ Logs no Discord</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="inscricao" class="content-grid">
+      <div class="form-panel glass">
+        <span class="section-tag">Formulário</span>
+        <h2>Registrar candidatura</h2>
+        <p class="subtitle">Preencha corretamente. O sistema não adivinha nick, infelizmente.</p>
+
+        <form id="formInscricao">
+          <label>
+            <span>Nick do Roblox</span>
+            <input type="text" id="roblox" placeholder="Ex: Leonardo104187" maxlength="40" required>
+          </label>
+
+          <label>
+            <span>Discord</span>
+            <input type="text" id="discord" placeholder="Ex: @usuario ou usuario#0000" maxlength="40" required>
+          </label>
+
+          <button type="submit" id="btnEnviar">Próximo</button>
+        </form>
+
+        <div id="resultado" class="resultado escondido"></div>
+      </div>
+
+      <div id="vagas" class="vagas-panel glass">
+        <div class="vagas-header">
+          <div>
+            <span class="section-tag">Painel</span>
+            <h2>Vagas disponíveis</h2>
+          </div>
+          <strong id="contadorVagas">0/15</strong>
+        </div>
+
+        <div id="listaVagas" class="lista-vagas"></div>
+      </div>
+    </section>
+
+    <section class="banner-final">
+      <img src="https://media.discordapp.net/attachments/1512882801236644041/1514290136966369280/file_00000000e4c0720e9712f9e2e321c847.png?ex=6a3b4ed6&is=6a39fd56&hm=0e44b2b60c6da431a35e931a84a498b030d286c480e9dd1c0fd2b1008b4da2d2&=&format=webp&quality=lossless&width=724&height=542" alt="Imagem oficial EB LN">
+
+      <div>
+        <span class="section-tag">Identificação</span>
+        <h2>Guarde seu número oficial.</h2>
+        <p>
+          O número recebido após a inscrição será usado para organizar a lista de candidatos,
+          conferência das vagas e próximas etapas da eleição.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Exército Brasileiro LN</strong>
+    <span>Portal de Inscrições Eleitorais • Sistema de Vagas 1-15</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
